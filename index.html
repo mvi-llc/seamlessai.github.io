@@ -18,17 +18,40 @@ p{line-height:1.6;margin:0 0 1rem}
 a.btn{display:inline-block;background:var(--brand);color:#000;padding:0.75rem 1.5rem;border-radius:var(--radius);font-weight:600;text-decoration:none}
 section{max-width:720px;margin:5vh auto;padding:2rem;background:var(--card);color:#111;border-radius:var(--radius);box-shadow:0 4px 12px rgba(0,0,0,.2)}
 footer{font-size:.875rem;text-align:center;margin:4rem 0;color:#AAA}
+
+.btn{
+  background:linear-gradient(135deg,var(--brand) 0%,#37d4ff 100%);
+  color:#000;
+  padding:.8rem 1.8rem;
+  border:0;
+  border-radius:var(--radius);
+  font-weight:600;
+  font-size:1rem;
+  cursor:pointer;
+  transition:transform .15s ease,box-shadow .15s ease,background-position .3s ease;
+  background-size:200%;
+  background-position:0 0;
+}
+.btn:hover{
+  background-position:100% 0;
+  box-shadow:0 4px 12px rgba(0,0,0,.25);
+  transform:translateY(-2px);
+}
+.btn:active{
+  transform:translateY(0);
+  box-shadow:0 2px 6px rgba(0,0,0,.2);
+}
 </style>
 
 <section>
-  <h1>Generate tile-perfect PBR textures directly in Unity<br>— 100% offline, on your GPU</h1>
+  <h1>Generate tile-perfect PBR textures directly in Unity— 100% offline, on your GPU</h1>
   <p>Seamless AI lets you turn a prompt into production-ready albedo, normal, roughness, and metallic maps in seconds—no API keys, no cloud fees.</p>
 
   <form id="signup" method="post">
     <label for="email">Join the private beta 👇</label><br>
     <input id="email" name="email" type="email" required placeholder="you@example.com"
            style="padding:.75rem 1rem;width:60%;max-width:280px;border:1px solid #CCC;border-radius:var(--radius);margin:.5rem 0">
-    <button type="submit" class="btn">Notify me</button>
+    <button type="submit" class="btn">Notify&nbsp;me</button>
   </form>
   <p style="font-size:.875rem;color:#666">We’ll only email you about the beta. Unsubscribe anytime.</p>
 </section>
